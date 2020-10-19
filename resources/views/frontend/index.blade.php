@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-<!-- Content 略... -->
+<!-- Content -->
 
 <section class="page-section clearfix">
   <div class="container">
