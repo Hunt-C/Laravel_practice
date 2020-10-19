@@ -7,18 +7,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item active px-lg-4">
+        <li class="nav-item @yield('nav_home') px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{{route('home')}}">Home <!-- href="index.html" -->
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li class="nav-item px-lg-4">
+        <li class="nav-item @yield('nav_about') px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{{route('about')}}">About</a> <!-- href="about.html" -->
         </li>
-        <li class="nav-item px-lg-4">
+        <li class="nav-item @yield('nav_products') px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{{route('products')}}">Products</a> <!-- href="products.html" -->
         </li>
-        <li class="nav-item px-lg-4">
+        <li class="nav-item @yield('nav_store') px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="{{route('store')}}">Store</a> <!-- href="store.html" -->
         </li>
       </ul>
