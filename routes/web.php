@@ -1,5 +1,5 @@
 <?php
-
+//require '../vendor/autoload.php';
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +42,16 @@ Route::get('store', function () {
 
 
 
+Route::get('/', 'Frontend\HomeController@index')->name('home');
+
+Route::get('about', 'Frontend\AboutController@index')->name('about');
+
+Route::get('products', 'Frontend\ProductController@index')->name('products');
+
+Route::get('store', 'Frontend\StoreController@index')->name('store');
+
+
+
 
 // 登入頁面
 Route::get('/admin/login', function (){
@@ -75,3 +85,12 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function() {
     Route::get('store', 'Backend\StoreController@edit')->name('store.edit');
     Route::post('store', 'Backend\StoreController@update')->name('store.update');
 });
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
