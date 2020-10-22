@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="form-group row justify-content-md-center mt-5">
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <button type="submit" class="btn btn-primary">登入</button>
                             </div>
                         </div>
