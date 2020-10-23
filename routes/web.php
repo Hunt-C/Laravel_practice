@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+//require '../vendor/autoload.php';
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend;
 
@@ -21,36 +21,38 @@ Route::get('welcome2', function () {
 });
 
 
-Route::get('/', function () {
-    return view('frontend.index');
-})->name('home');
-
-Route::get('home', function () {
-    return view('frontend.index');
-})->name('home');
-
-Route::get('about', function () {
-    return view('frontend.about');
-})->name('about');
-
-Route::get('products', function () {
-    return view('frontend.products');
-})->name('products');
-Route::get('store', function () {
-    return view('frontend.store');
-})->name('store');
-
-
-
-
-
-// Route::get('/', 'Frontend\HomeController@index')->name('home');
+// Route::get('/', function () {
+//     return view('frontend.index');
+// })->name('home');
 //
-// Route::get('about', 'Frontend\AboutController@index')->name('about');
+// Route::get('home', function () {
+//     return view('frontend.index');
+// })->name('home');
 //
-// Route::get('products', 'Frontend\ProductController@index')->name('products');
+// Route::get('about', function () {
+//     return view('frontend.about');
+// })->name('about');
 //
-// Route::get('store', 'Frontend\StoreController@index')->name('store');
+// Route::get('products', function () {
+//     return view('frontend.products');
+// })->name('products');
+// Route::get('store', function () {
+//     return view('frontend.store');
+// })->name('store');
+
+
+
+
+
+Route::get('/', 'App\Http\Controllers\Frontend\HomeController@index')->name('home');
+
+Route::get('home', 'App\Http\Controllers\Frontend\HomeController@index')->name('home');
+
+Route::get('about', 'App\Http\Controllers\Frontend\AboutController@index')->name('about');
+
+Route::get('products', 'App\Http\Controllers\Frontend\ProductController@index')->name('products');
+
+Route::get('store', 'App\Http\Controllers\Frontend\StoreController@index')->name('store');
 
 
 
