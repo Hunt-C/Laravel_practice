@@ -17,6 +17,17 @@ class StoreController extends Controller
         $store = Store::find(1);
         $website = Website::find(1);
         $about = About::find(1);
+
+        if ($store == null) {
+            // User not found, show 404 or whatever you want to do
+            // example:
+            //return View('admin.user.notFound', [], 404);
+            echo("<script>alert('JSwindow: =_=!')</script>");
+            //echo("<script>window.location = 'index.php?page=hero.php';</script>");
+        }
+        else {
+            //echo date('g:i A', strtotime($store->sun_open));
+        }
         return view('frontend.store', compact('store', 'website', 'about'));
     }
 }

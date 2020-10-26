@@ -2,10 +2,10 @@
 
 @section('title', 'Store')
 
-@section('nav_store', 'active');
+@section('nav_store', 'active')
 
 @section('content')
-
+<!-- Content Start -->
 <section class="page-section cta">
   <div class="container">
     <div class="row">
@@ -18,46 +18,73 @@
           <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
             <li class="list-unstyled-item list-hours-item d-flex">
               Sunday
-              <span class="ml-auto">Closed</span>
+              @if ($store->sun_open == $store->sun_close)
+                <span class="ml-auto">Closed</span>
+              @else
+                <span class="ml-auto">{{ date('g:i A', strtotime($store->sun_open)) ?? 'qq' }} to {{ date('g:i A', strtotime($store->sun_close)) ?? 'qq' }}</span>
+              @endif
             </li>
             <li class="list-unstyled-item list-hours-item d-flex">
               Monday
-              <span class="ml-auto">7:00 AM to 8:00 PM</span>
+              @if ($store->mon_open == $store->mon_close)
+                <span class="ml-auto">Closed</span>
+              @else
+                <span class="ml-auto">{{ date('g:i A', strtotime($store->mon_open)) ?? 'qq' }} to {{ date('g:i A', strtotime($store->mon_close)) ?? 'qq' }}</span>
+              @endif
             </li>
             <li class="list-unstyled-item list-hours-item d-flex">
               Tuesday
-              <span class="ml-auto">7:00 AM to 8:00 PM</span>
+              @if ($store->tue_open == $store->tue_close)
+                <span class="ml-auto">Closed</span>
+              @else
+                <span class="ml-auto">{{ date('g:i A', strtotime($store->tue_open)) ?? 'qq' }} to {{ date('g:i A', strtotime($store->tue_close)) ?? 'qq' }}</span>
+              @endif
             </li>
             <li class="list-unstyled-item list-hours-item d-flex">
               Wednesday
-              <span class="ml-auto">7:00 AM to 8:00 PM</span>
+              @if ($store->wed_open == $store->wed_close)
+                <span class="ml-auto">Closed</span>
+              @else
+                <span class="ml-auto">{{ date('g:i A', strtotime($store->wed_open)) ?? 'qq' }} to {{ date('g:i A', strtotime($store->wed_close)) ?? 'qq' }}</span>
+              @endif
             </li>
             <li class="list-unstyled-item list-hours-item d-flex">
               Thursday
-              <span class="ml-auto">7:00 AM to 8:00 PM</span>
+              @if ($store->thu_open == $store->thu_close)
+                <span class="ml-auto">Closed</span>
+              @else
+                <span class="ml-auto">{{ date('g:i A', strtotime($store->thu_open)) ?? 'qq' }} to {{ date('g:i A', strtotime($store->thu_close)) ?? 'qq' }}</span>
+              @endif
             </li>
             <li class="list-unstyled-item list-hours-item d-flex">
               Friday
-              <span class="ml-auto">7:00 AM to 8:00 PM</span>
+              @if ($store->fri_open == $store->fri_close)
+                <span class="ml-auto">Closed</span>
+              @else
+                <span class="ml-auto">{{ date('g:i A', strtotime($store->fri_open)) ?? 'qq' }} to {{ date('g:i A', strtotime($store->fri_close)) ?? 'qq' }}</span>
+              @endif
             </li>
             <li class="list-unstyled-item list-hours-item d-flex">
               Saturday
-              <span class="ml-auto">9:00 AM to 5:00 PM</span>
+              @if ($store->sat_open == $store->sat_close)
+                <span class="ml-auto">Closed</span>
+              @else
+                <span class="ml-auto">{{ date('g:i A', strtotime($store->sat_open)) ?? 'qq' }} to {{ date('g:i A', strtotime($store->sat_close)) ?? 'qq' }}</span>
+              @endif
             </li>
           </ul>
           <p class="address mb-5">
             <em>
-              <strong>1116 Orchard Street</strong>
+              <strong>Address</strong>
               <br>
-              Golden Valley, Minnesota
+              {{ $store->address ?? 'qq' }}
             </em>
           </p>
           <p class="mb-0">
             <small>
-              <em>Call Anytime</em>
+              Cal Me Anytime ❤ ❤ 
             </small>
-            <br>
-            (317) 585-8468
+            <br> {{ $store->phone ?? 'qq'}}
           </p>
         </div>
       </div>
@@ -67,24 +94,18 @@
 
 <section class="page-section about-heading">
   <div class="container">
-    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{{ asset('/uploads/about/' . $about->image) }}" alt="">
     <div class="about-heading-content">
       <div class="row">
         <div class="col-xl-9 col-lg-10 mx-auto">
           <div class="bg-faded rounded p-5">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-              <span class="section-heading-lower">About Our Cafe</span>
-            </h2>
-            <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-            <p class="mb-0">We guarantee that you will fall in
-              <em>lust</em>
-              with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+            <!-- {{ $about->content ?? 'qq'}} -->
+            {!! $about->content !!}
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-  @endsection
+<!-- Content End -->
+@endsection
