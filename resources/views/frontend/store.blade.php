@@ -82,7 +82,7 @@
           </p>
           <p class="mb-0">
             <small>
-              Cal Me Anytime ❤ ❤ 
+              Call Me Anytime ❤ ❤ 
             </small>
             <br> {{ $store->phone ?? 'qq'}}
           </p>
