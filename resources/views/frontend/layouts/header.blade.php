@@ -10,7 +10,7 @@
 </h1>
 <!-- Header End -->
 
-<div class="intro-button mx-auto">
+<!-- <div class="intro-button mx-auto"> -->
   <!-- <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a> -->
-  <a class="btn btn-primary btn-xl" href="admin/login">Login</a>
-</div>
+  <!-- <a class="btn btn-primary btn-xl" href="admin/login">Login</a> -->
+<!-- </div> -->
