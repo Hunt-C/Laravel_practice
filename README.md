@@ -1,3 +1,7 @@
+# Larevel_practice
+following: https://github.com/chasewwy/laravel_tutorial https://dometi.com.tw/blog/category/%e7%b6%b2%e9%a0%81%e5%be%8c%e7%ab%af%e6%95%99%e5%ad%b8/laravel%e6%95%99%e5%ad%b8/
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
