@@ -1,0 +1,5 @@
+xxxxxx
+this shouldn't be pushed due to *.test in global .gitignore (O)
+
+if (O):
+*.test and .test in global .gitignore have diff means

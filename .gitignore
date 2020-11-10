@@ -1,7 +1,8 @@
 
 ## Mine ##
 /laravel2/*.txt
-*.test
+.test #wouldn't ignore /laravel2/yaya2/xxxx.test
+#*.test #would ignore /laravel2/yaya2/xxxx.test
 
 
 /node_modules
