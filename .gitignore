@@ -1,6 +1,7 @@
 
 ## Mine ##
 /laravel2/*.txt
+*.test
 
 
 /node_modules
