@@ -1,3 +1,8 @@
+
+## Mine ##
+/laravel2/*.txt
+
+
 /node_modules
 /public/hot
 /public/storage
